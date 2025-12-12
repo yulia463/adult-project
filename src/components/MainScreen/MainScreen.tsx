@@ -1,5 +1,5 @@
 import HeaderForMainScreen from "@/components/Headers/HeaderForMainScreen";
-import styles from "../components/MainScreen.module.scss";
+import styles from "../MainScreen/MainScreen.module.scss";
 import Button from "@/components/Button";
 import BigRocket from "@/app/svg/BigRocket";
 import Women from "@/app/svg/Women";
@@ -26,7 +26,6 @@ export default function MainScreen() {
                     <Button size="M" variant="pink" icon={BigRocket}>
                         <div className={styles.btnText}>Free Undressher Online</div>
                     </Button>
-
                 </div>
             </div>
         </div>
