@@ -13,17 +13,21 @@ export default function TableOfContents() {
                     <div className={styles.textWorks}>How It Works?</div>
                 </div>
 
-                <div>
+                <div className={styles.aboutService}>
                     Our service is a sophisticated AI-powered app that learns from large amounts of online data. Using
                     complex algorithms, it can remove clothing in seconds thanks to its precise analysis of the human
                     body.
-                    Our platform provides our users with a smooth undressing process, offering free undress photo.
+                    Our platform provides our users with a smooth undressing process, offering <br/> free undress photo.
                 </div>
-                <div>
-                    <div>icon</div>
-                    <div>A secure and innovative deepnude app</div>
-                    <div>icon</div>
-                    <div>Confidential registration with full data protection</div>
+                <div className={styles.iconAndBlueText}>
+                    <div className={styles.divIconAndBlueText}>
+                        <div>icon</div>
+                        <div className={styles.blueText}>A secure and innovative deepnude app</div>
+                    </div>
+                    <div className={styles.divIconAndBlueText}>
+                        <div>icon</div>
+                        <div className={styles.blueText}>Confidential registration with full data protection</div>
+                </div>
                 </div>
                 <div>
                     <Button size="M" variant="pink" icon={BigRocket}>Undress a photo</Button>

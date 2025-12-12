@@ -38,3 +38,42 @@
   color: var(--color-pink);
 
 }
+
+.aboutService {
+  color: var(--color-gray);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0;
+
+  @media (min-width: 769px) {
+    font-size: 24px;
+  }
+}
+
+.iconAndBlueText {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  gap: 22px;
+  @media (min-width: 769px) {
+    gap: 0;
+  }
+}
+
+.divIconAndBlueText {
+  border: 1px solid red;
+  display: flex;
+}
+
+.blueText {
+  color: var(--color-blue);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0;
+
+  @media (min-width: 769px) {
+    font-size: 24px;
+  }
+}
