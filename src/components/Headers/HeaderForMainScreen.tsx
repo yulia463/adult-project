@@ -1,11 +1,13 @@
 "use client";
 import Button from "@/components/Button";
 import styles from "../Headers/HeaderForMainScreen.module.scss";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export default function HeaderForMainScreen() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
     const [activeTab, setActiveTab] = useState<number | null>(null);
+
+
 
     const tabs: string[] = [
         "Home",
@@ -18,8 +20,15 @@ export default function HeaderForMainScreen() {
         setActiveTab(index);
     };
 
+
+    useEffect(() => {
+        document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
+    }, [isMobileMenuOpen]);
+
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} ${
+            isMobileMenuOpen ? styles.mobileOpen : ""
+        }`}>
             <div className={styles.titleWrapper}>
                 <div className={styles.title}>
                     <div className={styles.firstWorld}>Undress</div>
