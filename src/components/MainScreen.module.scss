@@ -1,0 +1,81 @@
+.container {
+  margin-top: 28px;
+  background-color: var(--color-black);
+  border-radius: 32px;
+
+  @media (min-width: 600px) {
+    border-radius: 50px;
+  }
+}
+
+.textContainer {
+  background-color: var(--color-white);
+  margin-top: 200px;
+}
+
+.textRevolut {
+  color: var(--color-pink);
+  font-weight: 700;
+  font-size: 100px;
+  letter-spacing: 0;
+}
+
+.textAndFotoAndBtn {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.textUndressing {
+  color: var(--color-black);
+  font-weight: 700;
+  font-size: 100px;
+  letter-spacing: 0;
+
+}
+
+.textAndTextDescription {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  max-width: 509px;
+  gap: 12px;
+  margin-left: 56px;
+  margin-top: 425px;
+}
+
+.text {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: 130%;
+
+}
+
+.textDescription {
+  color: var(--color-gray);
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 150%;
+}
+
+.foto {
+  border: 1px solid gold;
+  top: 200px;
+  margin-top: -120px;
+}
+
+.btn {
+  margin-right: 55px;
+  border: 1px solid #0051ff;
+  margin-top: 444px;
+}
+
+.btnText {
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 100%;
+}
