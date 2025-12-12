@@ -1,0 +1,72 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding-left: 40px;
+  padding-right: 40px;
+
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  width: 100%; // mobile-first FULL WIDTH
+  transition: all 0.2s ease;
+
+  @media (min-width: 600px) {
+    width: auto;
+  }
+
+  .icon {
+    display: block;
+  }
+}
+
+/* ------- Sizes ------- */
+
+.M {
+  height: 79px;
+  border-radius: 20px;
+}
+
+.S {
+  height: 50px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* ------- Variants (colors) ------- */
+
+.dark {
+  background: #2A2A2D;
+  color: #fff;
+}
+
+.lightPink {
+  background: #E459E2;
+}
+
+.pink {
+  background: #D46AD9;
+}
+
+.pinkGradient {
+  background: linear-gradient(90deg, #E459E2, #B031C2);
+}
+
+.purpleGradient {
+  background: linear-gradient(90deg, #B031C2, #691A82);
+}
+
+.white {
+  background: #fff;
+  color: #E459E2;
+  border: 1px solid #E459E2;
+}
+
+.gray {
+  background: #ECECEC;
+  color: #75767F;
+}
