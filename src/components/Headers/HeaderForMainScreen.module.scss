@@ -1,18 +1,30 @@
 .container {
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+
+  @media (min-width: 769px) {
+    gap: 20px;
+  }
+}
+
+.titleWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .title {
-  border: 1px solid #000dff;
   display: flex;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 32px;
   line-height: 136%;
   letter-spacing: 0;
-  margin-left: 56px;
+  margin-top: 25px;
+
+  @media (min-width: 769px) {
+    font-size: 50px;
+  }
 }
 
 .firstWorld {
@@ -23,9 +35,129 @@
   color: var(--color-pink);
 }
 
-.btnText {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 100%;
-  letter-spacing: 0;
+.burger {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+
+  @media (min-width: 769px) {
+      display: none;
+  }
+
+  span {
+    display: block;
+    height: 3px;
+    background-color: var(--color-white);
+    border-radius: 2px;
+  }
+}
+
+.mobileDropdown {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  margin-top: 35px;
+  position: relative;
+  max-height: calc(100vh - 60px);
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+
+  .tabsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .mobileTab {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-gray);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-pink);
+    }
+
+  }
+
+  .activeTab {
+    color: var(--color-pink);
+  }
+
+  .buttonBottom {
+    position: sticky;
+    bottom: 0;
+    margin-top: 20px;
+  }
+}
+
+.desktopButtonWrapper {
+  display: none;
+
+  @media (min-width: 769px) {
+    display: block;
+  }
+
+  .mobileButtonWrapper {
+    display: block;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+}
+
+.desktopMenu {
+  display: none;
+
+  @media (min-width: 769px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tabs {
+    display: flex;
+    gap: 40px;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--color-gray);
+  }
+
+  .tab {
+    cursor: pointer;
+  }
+
+  .buttonWrapper {
+    .btn {
+      font-weight: 600;
+      font-size: 24px;
+      padding: 8px 20px;
+      background-color: var(--color-black);
+      color: var(--color-white);
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.grayLine {
+  width: 100vw;
+  height: 1px;
+  background-color: var(--color-dark);
+  position: relative;
+  left: calc(-50vw + 50%);
+
+  @media (min-width: 769px) {
+    display: none;
+  }
 }

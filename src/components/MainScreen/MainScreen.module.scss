@@ -10,7 +10,11 @@
 
 .textContainer {
   background-color: var(--color-white);
-  margin-top: 200px;
+  margin-top: 16px;
+
+  @media (min-width: 769px) {
+    margin-top: 200px;
+}
 }
 
 .textRevolut {
@@ -23,7 +27,8 @@
 .textAndFotoAndBtn {
   display: flex;
   justify-content: space-between;
-
+  padding-bottom: 68px;
+  border: 1px solid red;
 }
 
 .textUndressing {
