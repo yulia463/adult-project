@@ -1,17 +1,18 @@
-.container {
-  margin-top: 28px;
+.containerMainScreen {
   background-color: var(--color-black);
   border-radius: 32px;
+  margin: 28px 12px 40px 12px;
 
   @media (min-width: 600px) {
     border-radius: 50px;
+    margin: 28px 28px 80px 28px;
   }
 }
 
 .textContainer {
   background-color: var(--color-white);
   margin-top: 16px;
-
+  border: 1px solid #223419;
   @media (min-width: 769px) {
     margin-top: 200px;
 }

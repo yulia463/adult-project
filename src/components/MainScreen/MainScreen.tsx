@@ -6,7 +6,7 @@ import Women from "@/app/svg/Women";
 
 export default function MainScreen() {
     return (
-        <div className={styles.container}>
+        <div className={styles.containerMainScreen}>
             <div><HeaderForMainScreen/></div>
             <div className={styles.textContainer}>
                 <div className={styles.textRevolut}>Revolutionary AI</div>
