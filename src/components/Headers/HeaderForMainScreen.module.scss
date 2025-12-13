@@ -98,6 +98,11 @@
 
   .tab {
     cursor: pointer;
+    color: var(--color-gray);
+
+    &:hover {
+      color: var(--color-pink);
+    }
   }
 }
 
