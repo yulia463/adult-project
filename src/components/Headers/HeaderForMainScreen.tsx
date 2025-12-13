@@ -76,7 +76,7 @@ export default function HeaderForMainScreen() {
                     </div>
 
                     <div className={styles.mobileButtonWrapper}>
-                        <Button size="S" variant="dark">Try now</Button>
+                        <Button size="M" variant="dark">Try now</Button>
                     </div>
                 </div>
             )}
