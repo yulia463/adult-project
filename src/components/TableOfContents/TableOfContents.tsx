@@ -1,16 +1,41 @@
+"use client";
+
 import styles from "@/components/TableOfContents/TableOfContents.module.scss";
 import Button from "@/components/Button";
 import BigRocket from "@/app/svg/BigRocket";
-import SmallLike from "@/app/svg/SmallLike";
-import SmallMan from "@/app/svg/SmallMan";
 import Image from "next/image";
 import CloudIcon from "@/app/svg/CloudIcon";
+import {useState} from "react";
+
+const TABS = [
+    "Undress her free: How It Works?",
+    "Why users rely on us",
+    "Discover Undress Her AI Modes",
+    "Results of Free AI Undresser",
+    "How to Use AI Undress App?",
+];
+
 
 export default function TableOfContents() {
+    const [activeTab, setActiveTab] = useState(0);
+
     return (
         <div className={styles.containerTableOfContents}>
-            <div>Table of Contents</div>
-            <div>Undress her free: How It Works?</div>
+
+            <div className={styles.tabsWrapper}>
+                {TABS.map((tab, index) => (
+                    <div
+                        key={tab}
+                        className={`${styles.tab} ${
+                            activeTab === index ? styles.activeTab : ""
+                        }`}
+                        onClick={() => setActiveTab(index)}
+                    >
+                        {tab}
+                    </div>
+                ))}
+            </div>
+
             <div className={styles.whiteContainer}>
                 <div className={styles.descriptionOfContainer}>
                     <div className={styles.textUndress}>Undress her free:</div>
@@ -25,11 +50,23 @@ export default function TableOfContents() {
                 </div>
                 <div className={styles.iconAndBlueText}>
                     <div className={styles.divIconAndBlueText}>
-                        <div><SmallMan/></div>
+                        <div className={styles.smallIcon}>
+                            <Image
+                                src="/img/MenIcon.png"
+                                alt="Men Icon"
+                                fill
+                            />
+                        </div>
                         <div className={styles.blueText}>A secure and innovative deepnude app</div>
                     </div>
                     <div className={styles.divIconAndBlueText}>
-                        <div><SmallLike/></div>
+                        <div className={styles.smallIcon}>
+                            <Image
+                                src="/img/CirclLikeIcon.png"
+                                alt="Circle Like Icon"
+                                fill
+                            />
+                        </div>
                         <div className={styles.blueText}>Confidential registration with full data protection</div>
                     </div>
                 </div>
@@ -44,13 +81,13 @@ export default function TableOfContents() {
                 <div className={styles.cloudAndWomenContainer}>
                     <div className={styles.pinkContainer}>
                         <div><CloudIcon/></div>
-                        <div>
+                        <div className={styles.womenImage}>
                             <Image
                                 src="/img/PinkWomen.png"
                                 alt="Pink Women"
-                                width={200}
-                                height={200}
-                            /></div>
+                                fill
+                            />
+                        </div>
                     </div>
 
                 </div>

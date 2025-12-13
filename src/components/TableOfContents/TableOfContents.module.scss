@@ -5,6 +5,53 @@
   }
 }
 
+.tabsWrapper {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 0 16px;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 769px) {
+    padding: 0 103px;
+  }
+}
+
+.tab {
+  position: relative;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-black);
+  cursor: pointer;
+  padding-bottom: 10px;
+
+  @media (min-width: 769px) {
+    padding-bottom: 12px;
+    font-size: 18px;
+  }
+}
+
+.activeTab {
+  color: var(--color-pink);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-pink);
+    border-radius: 2px;
+  }
+}
+
+
 .whiteContainer{
   display: flex;
   flex-direction: column;
@@ -62,7 +109,6 @@
 }
 
 .divIconAndBlueText {
-  border: 1px solid red;
   display: flex;
   align-items: center;
 }
@@ -92,10 +138,6 @@
   }
 }
 
-.cloudAndWomenContainer {
-
-}
-
 .pinkContainer {
   border: 1px dashed var(--color-pink);
   border-radius: 17px;
@@ -118,4 +160,58 @@
   @media (min-width: 769px) {
     display: none;
   }
+}
+
+.smallIcon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+
+  @media (min-width: 769px) {
+    width: 142px;
+    height: 142px;
+  }
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.womenImage {
+  position: relative;
+  width: 231.54px;
+  height: 342px;
+
+  @media (min-width: 769px) {
+    width: 384px;
+    height: 567px;
+  }
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.desktopLayout {
+  display: block;
+
+  @media (min-width: 769px) {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 80px;
+    align-items: start;
+  }
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
