@@ -25,6 +25,11 @@
 
   @media (min-width: 769px) {
     gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 блока в ряд
+    grid-auto-rows: auto;
+    margin-left: 163px;
+    margin-right: 163px;
   }
 }
 
@@ -37,10 +42,9 @@
   padding: 20px;
 
   @media (min-width: 769px) {
-    margin-left: 163px;
     padding: 20px 32px;
     border-radius: 20px;
-    max-width: 518px;
+    max-width: 100%;
   }
 }
 
