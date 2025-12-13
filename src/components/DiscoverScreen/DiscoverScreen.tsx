@@ -1,7 +1,11 @@
+"use client";
+
 import styles from "./DiscoverScreen.module.scss";
 import Button from "@/components/Button";
 import SmallRocket from "@/app/svg/SmallRocket";
 import Image from "next/image";
+import BigRocket from "@/app/svg/BigRocket";
+import {useEffect, useState} from "react";
 
 const CARDS = [
     {
@@ -31,6 +35,15 @@ const CARDS = [
 ];
 
 export default function DiscoverScreen() {
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => setIsDesktop(window.innerWidth >= 769);
+        handleResize(); // проверка при монтировании
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
         <div className={styles.container}>
             <div className={styles.blackContainer}>
@@ -61,7 +74,11 @@ export default function DiscoverScreen() {
                                 <div className={styles.cardTitle}>{card.title}</div>
                                 <div className={styles.cardDescription}>{card.description}</div>
                                 <div className={styles.cardBtn}>
-                                    <Button icon={SmallRocket} size="S">
+                                    <Button
+                                        variant='pink'
+                                        icon={isDesktop ? BigRocket : SmallRocket}
+                                        size={isDesktop ? "M" : "S"}
+                                        >
                                         Try for free
                                     </Button>
                                 </div>
