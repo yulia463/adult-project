@@ -1,6 +1,10 @@
 import styles from "@/components/TableOfContents/TableOfContents.module.scss";
 import Button from "@/components/Button";
 import BigRocket from "@/app/svg/BigRocket";
+import SmallLike from "@/app/svg/SmallLike";
+import SmallMan from "@/app/svg/SmallMan";
+import Image from "next/image";
+import CloudIcon from "@/app/svg/CloudIcon";
 
 export default function TableOfContents() {
     return (
@@ -21,23 +25,39 @@ export default function TableOfContents() {
                 </div>
                 <div className={styles.iconAndBlueText}>
                     <div className={styles.divIconAndBlueText}>
-                        <div>icon</div>
+                        <div><SmallMan/></div>
                         <div className={styles.blueText}>A secure and innovative deepnude app</div>
                     </div>
                     <div className={styles.divIconAndBlueText}>
-                        <div>icon</div>
+                        <div><SmallLike/></div>
                         <div className={styles.blueText}>Confidential registration with full data protection</div>
-                </div>
+                    </div>
                 </div>
                 <div>
-                    <Button size="M" variant="pink" icon={BigRocket}>Undress a photo</Button>
+                    <Button size="S" variant="pink" icon={BigRocket}>Undress a photo</Button>
                 </div>
-                <div>All you need is an internet connection and the photo you want to undress. It is very simple for
+                <div className={styles.allText}>All you need is an internet connection and the photo you want to
+                    undress. It is very simple for
                     you, without any unnecessary steps.
                 </div>
-                <div>foto</div>
-                <div>line</div>
+
+                <div className={styles.cloudAndWomenContainer}>
+                    <div className={styles.pinkContainer}>
+                        <div><CloudIcon/></div>
+                        <div>
+                            <Image
+                                src="/img/PinkWomen.png"
+                                alt="Pink Women"
+                                width={200}
+                                height={200}
+                            /></div>
+                    </div>
+
+                </div>
+
             </div>
+            <div className={styles.grayLine}></div>
+
         </div>
     );
 }
