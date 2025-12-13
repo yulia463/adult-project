@@ -5,7 +5,8 @@ import Button from "@/components/Button";
 import BigRocket from "@/app/svg/BigRocket";
 import Image from "next/image";
 import CloudIcon from "@/app/svg/CloudIcon";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import SmallRocket from "@/app/svg/SmallRocket";
 
 const TABS = [
     "Undress her free: How It Works?",
@@ -18,6 +19,14 @@ const TABS = [
 
 export default function TableOfContents() {
     const [activeTab, setActiveTab] = useState(0);
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => setIsDesktop(window.innerWidth >= 769);
+        handleResize(); // проверка при монтировании
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     return (
         <div className={styles.containerTableOfContents}>
@@ -53,8 +62,6 @@ export default function TableOfContents() {
                             undress photo.
                         </div>
 
-                        {/* Кнопка теперь в первой колонке */}
-
 
                         <div className={styles.iconAndBlueText}>
                             <div className={styles.divIconAndBlueText}>
@@ -74,7 +81,11 @@ export default function TableOfContents() {
 
                         </div>
                         <div className={styles.buttonWrapper}>
-                            <Button size="S" variant="pink" icon={BigRocket}>
+                            <Button
+                                icon={isDesktop ? BigRocket : SmallRocket}
+                                size={isDesktop ? "M" : "S"}
+                                variant="pink"
+                            >
                                 Undress a photo
                             </Button>
                         </div>
