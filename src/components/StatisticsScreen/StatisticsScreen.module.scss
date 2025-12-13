@@ -1,0 +1,91 @@
+.container {
+
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0;
+  color: var(--color-black);
+  margin-bottom: 20px;
+  margin-left: 16px;
+
+  @media (min-width: 769px) {
+    font-size: 40px;
+    margin-bottom: 44px;
+    margin-left: 163px;
+  }
+}
+
+.bloks {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  border-radius: 16px;
+  gap: 12px;
+  margin: 0 16px;
+  padding: 20px;
+
+  @media (min-width: 769px) {
+    gap: 20px;
+    margin-left: 163px;
+    padding: 20px 32px;
+    border-radius: 20px;
+    max-width: 518px;
+  }
+}
+
+.descriptions {
+
+  @media (min-width: 769px) {
+
+  }
+}
+
+.gradientNumber {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0;
+
+  background: linear-gradient(90deg, #E459E2, #931B91);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
+
+  @media (min-width: 769px) {
+    font-size: 60px;
+  }
+}
+
+.text{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 180%;
+  letter-spacing: 0;
+  color: var(--color-black);
+
+  @media (min-width: 769px) {
+    font-size: 18px;
+
+  }
+}
+
+.iconWrapper {
+  width: 80px;
+  height: 80px;
+
+  @media (min-width: 769px) {
+    width: 115px;
+    height: 115px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
