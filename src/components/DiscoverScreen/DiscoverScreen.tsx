@@ -25,7 +25,7 @@ const CARDS = [
     {
         title: "Deep fake",
         description: "advanced image manipulation for realistic transformations and artistic experimentation.",
-        image: "/img/Men.png",
+        image: "/img/Man.png",
         alt: "Undress AI 4",
     },
 ];
@@ -50,7 +50,11 @@ export default function DiscoverScreen() {
                                     alt={card.alt}
                                     width={300}
                                     height={300}
-                                    sizes="(max-width: 768px) 150px, 300px"
+                                    style={{
+                                        width: "100%",
+                                        height: "auto",
+                                    }}
+                                    sizes="(max-width: 768px) 100vw, 300px"
                                 />
                             </div>
                             <div className={styles.cardContent}>
