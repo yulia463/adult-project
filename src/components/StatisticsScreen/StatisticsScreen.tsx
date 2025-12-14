@@ -49,7 +49,7 @@ export default function StatisticsScreen() {
             <div className={styles.blocksWrapper}>
             {STATISTICS.map((item, index) => (
                 <div className={styles.bloks} key={index}>
-                    <div className={styles.descriptions}>
+                    <div>
                         <div className={styles.gradientNumber}>{item.value}</div>
                         <div className={styles.text}>{item.text}</div>
                     </div>

@@ -50,7 +50,9 @@ export default function DiscoverScreen() {
                 <div className={styles.header}>
                     <div className={styles.title}>Discover Undress Her AI Modes</div>
                     <div className={styles.description}>
-                        The functionality of the Undressher module on ai-deep-nude.com exceeds expectations: high-quality detailing, accurate shape recognition, high level of adaptation to the original image.
+                        The functionality of the Undressher module on ai-deep-nude.com exceeds expectations:
+                        high-quality
+                        detailing, accurate shape recognition, high level of adaptation to the original image.
                     </div>
                 </div>
 

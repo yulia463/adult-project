@@ -1,10 +1,3 @@
-.containerTableOfContents {
-  border: 1px solid orange;
-
-  @media (min-width: 769px) {
-  }
-}
-
 .tabsWrapper {
   display: flex;
   gap: 24px;
@@ -51,14 +44,13 @@
   }
 }
 
-
 .whiteContainer{
   display: flex;
   flex-direction: column;
   border-radius: 32px;
   background-color: var(--color-white);
   margin: 40px 12px;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 50px 20px;
   gap: 20px;
 
   @media (min-width: 769px) {
@@ -101,8 +93,8 @@
 .iconAndBlueText {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   gap: 22px;
+
   @media (min-width: 769px) {
     gap: 0;
   }
@@ -131,10 +123,12 @@
   line-height: 150%;
   letter-spacing: 0;
   color: var(--color-gray);
+  margin-top: 20px;
 
   @media (min-width: 769px) {
     font-size: 20px;
     line-height: 180%;
+    margin-top: 0;
   }
 }
 
@@ -168,8 +162,6 @@
   }
 }
 
-
-
 .desktopLayout {
   display: block;
 
@@ -190,14 +182,16 @@
 .rightColumn {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px;
+
+  @media (min-width: 769px) {
+    gap: 65px;
+  }
 }
 
 .cloudAndWomenContainer{
   position: relative;
-  border: 3px solid green;
 }
-
 
 .womenImage {
   position: absolute;
@@ -205,11 +199,6 @@
 
   bottom: -20px;
   right: -10px;
-
-
-
-
-  //position: relative;
   width: 231.54px;
   height: 342px;
 
@@ -229,10 +218,10 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -20px;          // разрешаем выход только на 20px
-  height: 100%;           // высота контейнера
-  overflow: hidden;       // ВАЖНО: обрезка
-  pointer-events: none;   // чтобы не мешал кликам
+  bottom: -20px;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .pinkContainer {
@@ -240,7 +229,6 @@
   border: 1px dashed var(--color-pink);
   border-radius: 17px;
   background-color: var(--color-ligth-pink);
-  //min-height: 284px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -249,6 +237,5 @@
 
   @media (min-width: 769px) {
     border-radius: 28px;
-    //min-height: 472px;
   }
 }
