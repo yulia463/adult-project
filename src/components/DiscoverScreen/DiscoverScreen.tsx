@@ -39,7 +39,7 @@ export default function DiscoverScreen() {
 
     useEffect(() => {
         const handleResize = () => setIsDesktop(window.innerWidth >= 769);
-        handleResize(); // проверка при монтировании
+        handleResize();
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);

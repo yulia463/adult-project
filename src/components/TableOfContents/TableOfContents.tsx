@@ -74,7 +74,6 @@ export default function TableOfContents() {
                                 <div className={styles.blueText}>Confidential registration with full data protection
                                 </div>
                             </div>
-
                         </div>
                         <div>
                             <Button
@@ -106,9 +105,7 @@ export default function TableOfContents() {
                     </div>
                 </div>
             </div>
-
             <div className={styles.grayLine}></div>
         </div>
     );
-
 }

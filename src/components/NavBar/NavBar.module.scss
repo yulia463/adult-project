@@ -4,13 +4,13 @@
 
 .navbar {
   display: grid;
+  justify-content: space-between;
+  grid-template-columns: auto auto;
+
   height: var(--navbar-height);
   padding: 25px 24px 0;
   align-items: center;
   z-index: 200;
-
-  justify-content: space-between;
-  grid-template-columns: auto auto;
 
   @media (min-width: 1040px) {
     grid-template-columns: auto 1fr auto;

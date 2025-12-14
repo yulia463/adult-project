@@ -1,7 +1,6 @@
 import styles from "./StatisticsScreen.module.scss";
 import Image from "next/image";
 
-
 const STATISTICS = [
     {
         value: "85k+",

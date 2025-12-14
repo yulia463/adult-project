@@ -1,16 +1,17 @@
 .containerMainScreen {
+  display: flex;
+  flex-direction: column;
   background-color: var(--color-black);
   border-radius: 32px;
   margin: 28px 12px 40px 12px;
 
-  display: flex;
-  flex-direction: column;
   @media (min-width: 1040px) {
     display: block;
     border-radius: 50px;
     margin: 28px 28px 80px 28px;
   }
 }
+
 .textContainer {
   margin: 16px 15% 0;
   text-align: center;
