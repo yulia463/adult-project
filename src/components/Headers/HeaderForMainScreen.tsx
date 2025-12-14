@@ -48,13 +48,11 @@ export default function HeaderForMainScreen() {
                 </button>
             </header>
 
-            {/* Overlay */}
             <div
                 className={`${styles.overlay} ${isOpen ? styles.active : ''}`}
                 onClick={() => setIsOpen(false)}
             />
 
-            {/* Mobile menu */}
             {isOpen && (
                 <aside className={`${styles.mobileMenu} ${isOpen ? styles.open : ''}`}>
                     <div className={styles.mobileDropdown}>
