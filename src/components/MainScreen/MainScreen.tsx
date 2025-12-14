@@ -1,4 +1,4 @@
-import HeaderForMainScreen from "@/components/Headers/HeaderForMainScreen";
+import NavBar from "@/components/NavBar/NavBar";
 import styles from "../MainScreen/MainScreen.module.scss";
 import Button from "@/components/Button";
 import BigRocket from "@/app/svg/BigRocket";
@@ -9,7 +9,7 @@ export default function MainScreen() {
 
     return (
         <div className={styles.containerMainScreen}>
-            <HeaderForMainScreen/>
+            <NavBar/>
 
             <div className={styles.titleWrapper}>
                 <TitleBackground/>

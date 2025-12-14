@@ -1,9 +1,9 @@
 "use client";
-import styles from "../Headers/HeaderForMainScreen.module.scss";
+import styles from "@/components/NavBar/NavBar.module.scss";
 import {useEffect, useState} from "react";
 import Button from "@/components/Button";
 
-export default function HeaderForMainScreen() {
+export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
     const [activeTab, setActiveTab] = useState<number | null>(null);
     const tabs: string[] = [
