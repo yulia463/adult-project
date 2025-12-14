@@ -12,6 +12,8 @@
   --color-purple: #931B91;
   --color-white: #ffffff;
   --color-container: #F5F5F5;
+
+  --navbar-height: 90px;
 }
 
 @media (prefers-color-scheme: dark) {

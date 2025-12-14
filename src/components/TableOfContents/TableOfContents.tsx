@@ -101,9 +101,11 @@ export default function TableOfContents() {
 
                         <div className={styles.cloudAndWomenContainer}>
                             <div className={styles.pinkContainer}>
-                                <CloudIcon />
+                                <CloudIcon/>
+                            </div>
+                            <div className={styles.womenClip}>
                                 <div className={styles.womenImage}>
-                                    <Image src="/img/PinkWomen.png" alt="Pink Women" fill />
+                                    <Image src="/img/PinkWomen.png" alt="Pink Women" fill/>
                                 </div>
                             </div>
                         </div>
