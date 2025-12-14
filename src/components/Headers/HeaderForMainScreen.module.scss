@@ -115,6 +115,7 @@
   position: absolute;
   top: var(--navbar-height);
   right: 0;
+  padding-bottom: 20px;
 
   width: 100%;
   height: calc(100vh - var(--navbar-height));
@@ -125,6 +126,7 @@
   background: var(--color-black);
   display: flex;
   flex-direction: column;
+  z-index: 100;
 }
 
 .mobileMenu.open {
@@ -137,9 +139,10 @@
   flex-direction: column;
   padding: 24px;
   overflow-y: auto;
-
+  justify-content: space-between;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+
 
   @media (min-width: 769px) {
     display: none;

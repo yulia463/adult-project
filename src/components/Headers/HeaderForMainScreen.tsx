@@ -1,6 +1,6 @@
 "use client";
 import styles from "../Headers/HeaderForMainScreen.module.scss";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Button from "@/components/Button";
 
 export default function HeaderForMainScreen() {
@@ -12,9 +12,21 @@ export default function HeaderForMainScreen() {
         "AI Clothes Remover Tool",
         "FAQ",
     ];
-    // const handleTabClick = (index: number) => {
-    //     setActiveTab(index);
-    // };
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+            document.body.style.touchAction = "none"; // важно для iOS
+        } else {
+            document.body.style.overflow = "";
+            document.body.style.touchAction = "";
+        }
+
+        return () => {
+            document.body.style.overflow = "";
+            document.body.style.touchAction = "";
+        };
+    }, [isOpen]);
 
     return (
         <div className={styles.headerLayout}>
