@@ -11,7 +11,6 @@ export default function MainScreen() {
             <HeaderForMainScreen/>
             <div className={styles.titleWrapper}>
                 <TitleBackground/>
-
                 <div className={styles.titleText}>
                     <div className={styles.textRevolut}>Revolutionary AI</div>
                     <span className={styles.textUndressing}>for Undressing Girls</span>
