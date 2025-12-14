@@ -16,7 +16,7 @@ export default function HeaderForMainScreen() {
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = "hidden";
-            document.body.style.touchAction = "none"; // важно для iOS
+            document.body.style.touchAction = "none";
         } else {
             document.body.style.overflow = "";
             document.body.style.touchAction = "";

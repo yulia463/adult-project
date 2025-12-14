@@ -12,13 +12,12 @@
   justify-content: space-between;
   grid-template-columns: auto auto;
 
-  @media (min-width: 769px) {
+  @media (min-width: 1040px) {
     grid-template-columns: auto 1fr auto;
   }
 }
 
 .title {
-  border: 1px solid red;
   display: flex;
   font-weight: 700;
   font-size: 32px;
@@ -26,7 +25,7 @@
   letter-spacing: 0;
   padding: 0 20px;
 
-  @media (min-width: 769px) {
+  @media (min-width: 1040px) {
     font-size: 50px;
   }
 }
@@ -57,13 +56,10 @@
 
 .desktopNav {
   display: flex;
-  //align-items: center;
   justify-content: center;
-  border: 1px solid red;
   gap: 50px;
 
   .desktopNavContent {
-    border: 1px solid red;
     display: flex;
     align-items: center;
 
@@ -144,7 +140,7 @@
   border-bottom-right-radius: 20px;
 
 
-  @media (min-width: 769px) {
+  @media (min-width: 1040px) {
     display: none;
   }
 }
@@ -170,10 +166,7 @@
   color: var(--color-pink);
 }
 
-@media (max-width: 768px) {
-  .navbar{
-
-  }
+@media (max-width: 1040px) {
   .desktopNav,
   .desktopButton {
     display: none;

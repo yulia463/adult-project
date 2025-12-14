@@ -6,9 +6,11 @@ import Women from "@/app/svg/Women";
 import TitleBackground from "@/app/svg/TitleBackground";
 
 export default function MainScreen() {
+
     return (
         <div className={styles.containerMainScreen}>
             <HeaderForMainScreen/>
+
             <div className={styles.titleWrapper}>
                 <TitleBackground/>
                 <div className={styles.titleText}>
@@ -16,7 +18,6 @@ export default function MainScreen() {
                     <span className={styles.textUndressing}>for Undressing Girls</span>
                 </div>
             </div>
-
 
             <div className={styles.textAndFotoAndBtn}>
                 <div className={styles.textAndTextDescription}>
