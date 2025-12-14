@@ -1,17 +1,24 @@
-import HeaderForMainScreen from "@/components/Headers/HeaderForMainScreen";
+import NavBar from "@/components/NavBar/NavBar";
 import styles from "../MainScreen/MainScreen.module.scss";
 import Button from "@/components/Button";
 import BigRocket from "@/app/svg/BigRocket";
 import Women from "@/app/svg/Women";
+import TitleBackground from "@/app/svg/TitleBackground";
 
 export default function MainScreen() {
+
     return (
         <div className={styles.containerMainScreen}>
-            <div><HeaderForMainScreen/></div>
-            <div className={styles.textContainer}>
-                <div className={styles.textRevolut}>Revolutionary AI</div>
-                <div className={styles.textUndressing}>for Undressing Girls</div>
+            <NavBar/>
+
+            <div className={styles.titleWrapper}>
+                <TitleBackground/>
+                <div className={styles.titleText}>
+                    <div className={styles.textRevolut}>Revolutionary AI</div>
+                    <span className={styles.textUndressing}>for Undressing Girls</span>
+                </div>
             </div>
+
             <div className={styles.textAndFotoAndBtn}>
                 <div className={styles.textAndTextDescription}>
                     <div className={styles.text}>Undressher: The Best Decision of Your Life</div>

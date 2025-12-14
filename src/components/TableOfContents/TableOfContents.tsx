@@ -30,7 +30,6 @@ export default function TableOfContents() {
 
     return (
         <div className={styles.containerTableOfContents}>
-            {/* Tabs */}
             <div className={styles.tabsWrapper}>
                 {TABS.map((tab, index) => (
                     <div
@@ -43,10 +42,8 @@ export default function TableOfContents() {
                 ))}
             </div>
 
-            {/* White container */}
             <div className={styles.whiteContainer}>
                 <div className={styles.desktopLayout}>
-                    {/* LEFT COLUMN */}
                     <div className={styles.leftColumn}>
                         <div className={styles.descriptionOfContainer}>
                             <div className={styles.textUndress}>Undress her free:</div>
@@ -61,7 +58,6 @@ export default function TableOfContents() {
                             body. Our platform provides our users with a smooth undressing process, offering <br/> free
                             undress photo.
                         </div>
-
 
                         <div className={styles.iconAndBlueText}>
                             <div className={styles.divIconAndBlueText}>
@@ -78,9 +74,8 @@ export default function TableOfContents() {
                                 <div className={styles.blueText}>Confidential registration with full data protection
                                 </div>
                             </div>
-
                         </div>
-                        <div className={styles.buttonWrapper}>
+                        <div>
                             <Button
                                 icon={isDesktop ? BigRocket : SmallRocket}
                                 size={isDesktop ? "M" : "S"}
@@ -91,9 +86,7 @@ export default function TableOfContents() {
                         </div>
                     </div>
 
-                    {/* RIGHT COLUMN */}
                     <div className={styles.rightColumn}>
-                        {/* Текст и фото в правой колонке */}
                         <div className={styles.allText}>
                         All you need is an internet connection and the photo you want to undress. It is very simple for you,
                             without any unnecessary steps.
@@ -101,18 +94,18 @@ export default function TableOfContents() {
 
                         <div className={styles.cloudAndWomenContainer}>
                             <div className={styles.pinkContainer}>
-                                <CloudIcon />
+                                <CloudIcon/>
+                            </div>
+                            <div className={styles.womenClip}>
                                 <div className={styles.womenImage}>
-                                    <Image src="/img/PinkWomen.png" alt="Pink Women" fill />
+                                    <Image src="/img/PinkWomen.png" alt="Pink Women" fill/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div className={styles.grayLine}></div>
         </div>
     );
-
 }
