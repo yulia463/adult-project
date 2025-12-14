@@ -1,16 +1,20 @@
 .headerLayout {
   position: relative;
-  margin: 0 auto;
 }
 
 .navbar {
+  display: grid;
   height: var(--navbar-height);
   padding: 25px 24px 0;
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  position: relative;
   z-index: 200;
+
+  justify-content: space-between;
+  grid-template-columns: auto auto;
+
+  @media (min-width: 769px) {
+    grid-template-columns: auto 1fr auto;
+  }
 }
 
 .title {
@@ -47,13 +51,14 @@
 .logo a {
   font-size: 18px;
   font-weight: 600;
-  color: #fff;
+  color: var(--color-white);
   text-decoration: none;
 }
 
 .desktopNav {
   display: flex;
-  align-items: center;
+  //align-items: center;
+  justify-content: center;
   border: 1px solid red;
   gap: 50px;
 
@@ -70,7 +75,7 @@
   }
 
   a {
-    color: #fff;
+    color: var(--color-white);
     text-decoration: none;
     font-size: 14px;
   }
@@ -89,15 +94,6 @@
     height: 2px;
     background: #fff;
   }
-}
-
-.primaryBtn {
-  padding: 8px 16px;
-  background: #2563eb;
-  border: none;
-  color: #fff;
-  border-radius: 6px;
-  cursor: pointer;
 }
 
 .overlay {
@@ -173,9 +169,10 @@
 
 @media (max-width: 768px) {
   .navbar{
-    justify-content: space-between;
+
   }
-  .desktopNav {
+  .desktopNav,
+  .desktopButton {
     display: none;
   }
   .burger {

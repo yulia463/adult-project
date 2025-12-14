@@ -12,9 +12,9 @@ export default function HeaderForMainScreen() {
         "AI Clothes Remover Tool",
         "FAQ",
     ];
-    const handleTabClick = (index: number) => {
-        setActiveTab(index);
-    };
+    // const handleTabClick = (index: number) => {
+    //     setActiveTab(index);
+    // };
 
     return (
         <div className={styles.headerLayout}>
@@ -28,18 +28,27 @@ export default function HeaderForMainScreen() {
                     <div className={styles.desktopNavContent}>
                         <div className={styles.desktopNavLinks}>
                             {tabs.map((tab, index) => (
-                                <div key={index} className={styles.tab}>
+                                <div
+                                    key={index}
+                                    className={`${styles.tab} ${
+                                        activeTab === index ? styles.activeTab : ""
+                                    }`}
+                                    onClick={() => setActiveTab(index)}
+                                >
                                     {tab}
                                 </div>
                             ))}
                         </div>
                     </div>
-                        <Button size="M" variant="dark">Try now</Button>
+
                 </nav>
+                <div className={styles.desktopButton}>
+                    <Button size="M" variant="dark">Try now</Button>
+                </div>
 
                 <button
                     className={styles.burger}
-                    onClick={() => setIsOpen(!isOpen)}
+                    onClick={() => setIsOpen(prev => !prev)}
                     aria-label="Open menu"
                 >
                     <span/>
@@ -63,10 +72,7 @@ export default function HeaderForMainScreen() {
                                     className={`${styles.mobileTab} ${
                                         activeTab === index ? styles.activeTab : ''
                                     }`}
-                                    onClick={() => {
-                                        handleTabClick(index);
-                                        setIsOpen(false);
-                                    }}
+                                    onClick={() => setActiveTab(index)}
                                 >
                                     {tab}
                                 </div>
